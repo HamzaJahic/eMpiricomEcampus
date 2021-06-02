@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txtRasporedNaslov"
+            android:id="@+id/txtAddAlertTitle"
             style="@style/TextAppearance.MaterialComponents.Headline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,18 +36,18 @@
 
 
         <TextView
-            android:id="@+id/tvTipProfila"
+            android:id="@+id/tvAlertType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/tip_obavijesti"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/spinnerTipObavijesti"
+            app:layout_constraintStart_toStartOf="@+id/spinnerAlertType"
             app:layout_constraintTop_toBottomOf="@+id/guideline4" />
 
 
         <Spinner
-            android:id="@+id/spinnerTipObavijesti"
+            android:id="@+id/spinnerAlertType"
             style="@style/spinner_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -56,23 +56,23 @@
             android:padding="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTipProfila"
+            app:layout_constraintTop_toBottomOf="@+id/tvAlertType"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.8"
             tools:setOnItemSelectedListener="@{viewModel.typeListener}" />
 
         <TextView
-            android:id="@+id/tvDetalji"
+            android:id="@+id/tvDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="@string/detalji"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/etDetalji"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerTipObavijesti" />
+            app:layout_constraintStart_toStartOf="@+id/etDetails"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerAlertType" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etDetalji"
+            android:id="@+id/etDetails"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -81,8 +81,8 @@
             app:boxStrokeWidth="2dp"
             app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent="0.4"
-            app:layout_constraintStart_toStartOf="@id/spinnerTipObavijesti"
-            app:layout_constraintTop_toBottomOf="@id/tvDetalji"
+            app:layout_constraintStart_toStartOf="@id/spinnerAlertType"
+            app:layout_constraintTop_toBottomOf="@id/tvDetails"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.8">
 
@@ -97,14 +97,14 @@
 
 
         <Button
-            android:id="@+id/btnObjavi"
+            android:id="@+id/btnPost"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:onClick="@{()-> viewModel.uploadData()}"
             android:text="@string/kreiraj"
-            app:layout_constraintStart_toStartOf="@id/etDetalji"
-            app:layout_constraintTop_toBottomOf="@id/etDetalji"
+            app:layout_constraintStart_toStartOf="@id/etDetails"
+            app:layout_constraintTop_toBottomOf="@id/etDetails"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.8" />
 
@@ -115,9 +115,9 @@
             android:layout_marginTop="10dp"
             android:onClick="@{()->viewModel.navigateToAlerts()}"
             android:text="@string/odustani"
-            app:layout_constraintEnd_toEndOf="@+id/btnObjavi"
-            app:layout_constraintStart_toStartOf="@id/btnObjavi"
-            app:layout_constraintTop_toBottomOf="@id/btnObjavi"
+            app:layout_constraintEnd_toEndOf="@+id/btnPost"
+            app:layout_constraintStart_toStartOf="@id/btnPost"
+            app:layout_constraintTop_toBottomOf="@id/btnPost"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.8" />
 

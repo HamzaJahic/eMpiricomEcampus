@@ -29,7 +29,7 @@
             >
 
             <ImageView
-                android:id="@+id/imgObavjestenje"
+                android:id="@+id/imgAlert"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:contentDescription="@string/alert_logo"
@@ -46,7 +46,7 @@
                 android:textColor="@color/primaryTextColor"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                card_view:layout_constraintStart_toEndOf="@id/imgObavjestenje"
+                card_view:layout_constraintStart_toEndOf="@id/imgAlert"
                 card_view:layout_constraintTop_toTopOf="parent"
                 tools:text="OGLAS" />
 
@@ -62,13 +62,13 @@
                 card_view:layout_constraintTop_toBottomOf="@id/tVType" />
 
             <TextView
-                android:id="@+id/tvDetalji"
+                android:id="@+id/tvDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                card_view:layout_constraintStart_toStartOf="@id/imgObavjestenje"
+                card_view:layout_constraintStart_toStartOf="@id/imgAlert"
                 card_view:layout_constraintTop_toBottomOf="@+id/horizontalDevider"
                 tools:text="POI" />
 

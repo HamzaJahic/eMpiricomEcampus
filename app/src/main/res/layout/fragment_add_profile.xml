@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txtRasporedNaslov"
+            android:id="@+id/txtAddProfile"
             style="@style/TextAppearance.MaterialComponents.Headline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
             app:layout_constraintGuide_begin="84dp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etIme"
+            android:id="@+id/etName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/etPRezime"
+            android:id="@+id/etLastName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
             app:boxStrokeWidth="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etIme"
+            app:layout_constraintTop_toBottomOf="@id/etName"
             app:layout_constraintWidth_default="percent"
 
             app:layout_constraintWidth_percent="0.8">
@@ -88,18 +88,18 @@
 
 
         <TextView
-            android:id="@+id/tvTipProfila"
+            android:id="@+id/tvCourse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/smijer"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/spinnerTipProfila"
-            app:layout_constraintTop_toBottomOf="@+id/etPRezime" />
+            app:layout_constraintStart_toStartOf="@+id/spinnerCourse"
+            app:layout_constraintTop_toBottomOf="@+id/etLastName" />
 
 
         <Spinner
-            android:id="@+id/spinnerTipProfila"
+            android:id="@+id/spinnerCourse"
             style="@style/spinner_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -108,20 +108,20 @@
             android:padding="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTipProfila"
+            app:layout_constraintTop_toBottomOf="@+id/tvCourse"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.8"
             tools:setOnItemSelectedListener="@{viewModel.courseListener}" />
 
         <TextView
-            android:id="@+id/tVSemestar"
+            android:id="@+id/tvSemester"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="@string/semestarAdd"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/spinnerSemestar"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerTipProfila" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerCourse" />
 
 
         <Spinner
@@ -134,14 +134,14 @@
             android:padding="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tVSemestar"
+            app:layout_constraintTop_toBottomOf="@+id/tvSemester"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.8"
             tools:setOnItemSelectedListener="@{viewModel.semesterListener}" />
 
 
         <Button
-            android:id="@+id/btnObjavi"
+            android:id="@+id/btnPost"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -160,9 +160,9 @@
             android:layout_marginTop="20dp"
             android:onClick="@{()-> viewModel.navigateToProfile()}"
             android:text="@string/odustani"
-            app:layout_constraintEnd_toEndOf="@+id/btnObjavi"
-            app:layout_constraintStart_toStartOf="@id/btnObjavi"
-            app:layout_constraintTop_toBottomOf="@id/btnObjavi"
+            app:layout_constraintEnd_toEndOf="@+id/btnPost"
+            app:layout_constraintStart_toStartOf="@id/btnPost"
+            app:layout_constraintTop_toBottomOf="@id/btnPost"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.8" />
 

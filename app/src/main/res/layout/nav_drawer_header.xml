@@ -7,7 +7,7 @@
     android:background="@color/primaryColor">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imgKorisnika"
+        android:id="@+id/imgUser"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_margin="8dp"
@@ -19,34 +19,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtImeKorisnika"
+        android:id="@+id/txtUserName"
         style="@style/nav_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="Hamza Jahić"
-        app:layout_constraintStart_toEndOf="@+id/imgKorisnika"
-        app:layout_constraintTop_toTopOf="@+id/imgKorisnika" />
+        app:layout_constraintStart_toEndOf="@+id/imgUser"
+        app:layout_constraintTop_toTopOf="@+id/imgUser" />
 
     <TextView
-        android:id="@+id/txtSemestar"
+        android:id="@+id/txtSemester"
         style="@style/nav_detail_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        tools:text="IV Semestar"
-        app:layout_constraintEnd_toEndOf="@+id/txtImeKorisnika"
-        app:layout_constraintStart_toStartOf="@+id/txtImeKorisnika"
-        app:layout_constraintTop_toBottomOf="@id/txtImeKorisnika" />
+        tools:text="IV Semester"
+        app:layout_constraintEnd_toEndOf="@+id/txtUserName"
+        app:layout_constraintStart_toStartOf="@+id/txtUserName"
+        app:layout_constraintTop_toBottomOf="@id/txtUserName" />
 
     <TextView
-        android:id="@+id/txtSmijer"
+        android:id="@+id/txtCourse"
         style="@style/nav_detail_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         tools:text="INI"
-        app:layout_constraintEnd_toEndOf="@+id/txtSemestar"
-        app:layout_constraintStart_toStartOf="@+id/txtSemestar"
-        app:layout_constraintTop_toBottomOf="@+id/txtSemestar" />
+        app:layout_constraintEnd_toEndOf="@+id/txtSemester"
+        app:layout_constraintStart_toStartOf="@+id/txtSemester"
+        app:layout_constraintTop_toBottomOf="@+id/txtSemester" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

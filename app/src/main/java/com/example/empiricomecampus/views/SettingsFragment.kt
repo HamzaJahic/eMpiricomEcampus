@@ -17,7 +17,9 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.empiricomecampus.databinding.FragmentSettingsBinding
 import com.example.empiricomecampus.firebase.UsersFirebase
-import com.example.empiricomecampus.viewmodels.MainActivityViewModel
+import com.example.empiricomecampus.utils.Constants.Companion.GALLERY_REQUEST_CODE
+import com.example.empiricomecampus.utils.Globals.Companion.USER_ID
+import com.example.empiricomecampus.utils.Globals.Companion.USER_NAME
 import com.example.empiricomecampus.viewmodels.SettingsViewModel
 import com.example.empiricomecampus.viewmodels.SettingsViewModelFactory
 import com.google.firebase.storage.FirebaseStorage
@@ -26,7 +28,6 @@ class SettingsFragment : Fragment() {
 
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!
-    val GALLERY_REQUEST_CODE = 123
     private val storageRefrence = FirebaseStorage.getInstance().reference
 
     override fun onCreateView(
@@ -39,17 +40,15 @@ class SettingsFragment : Fragment() {
         val view = binding.root
 
         val viewModelFactory = SettingsViewModelFactory()
-        val postavkeViewModel =
+        val settingsViewModel =
             ViewModelProvider(this, viewModelFactory).get(SettingsViewModel::class.java)
         val sharedPreferences =
             requireActivity().getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
 
-        binding.viewModelPostavke = postavkeViewModel
+        binding.viewModel = settingsViewModel
 
-
-
-        postavkeViewModel.navigateToChangePass.observe(viewLifecycleOwner, {
+        settingsViewModel.navigateToChangePass.observe(viewLifecycleOwner, {
             it?.let {
 
                 val action = SettingsFragmentDirections.actionSettingsFragmentToChangePassFragment()
@@ -58,7 +57,7 @@ class SettingsFragment : Fragment() {
             }
         })
 
-        postavkeViewModel.navigateToChangeImg.observe(viewLifecycleOwner, {
+        settingsViewModel.navigateToChangeImg.observe(viewLifecycleOwner, {
             it?.let {
                 val intent = Intent()
                 intent.type = "image/*"
@@ -70,7 +69,7 @@ class SettingsFragment : Fragment() {
             }
         })
 
-        postavkeViewModel.logOut.observe(viewLifecycleOwner, {
+        settingsViewModel.logOut.observe(viewLifecycleOwner, {
             it?.let {
                 editor.clear()
                 editor.apply()
@@ -81,7 +80,7 @@ class SettingsFragment : Fragment() {
             }
         })
 
-        postavkeViewModel.imgUri.observe(viewLifecycleOwner, {
+        settingsViewModel.imgUri.observe(viewLifecycleOwner, {
             Glide.with(requireActivity()).load(it).into(binding.imgUser)
             Log.d("ImgRead", "Value of img $it")
         })
@@ -105,11 +104,11 @@ class SettingsFragment : Fragment() {
     }
 
     private fun uploadToFirebase(uri: Uri) {
-        val fileRef = storageRefrence.child(MainActivityViewModel.name.value.toString())
+        val fileRef = storageRefrence.child(USER_NAME.value.toString())
         fileRef.putFile(uri).addOnSuccessListener {
             fileRef.downloadUrl.addOnSuccessListener {
                 Log.d("ImageUp", "Upload")
-                UsersFirebase.databaseReference.child(MainActivityViewModel.id.value.toString())
+                UsersFirebase.databaseReference.child(USER_ID.value.toString())
                     .child("img").setValue(it.toString())
 
             }

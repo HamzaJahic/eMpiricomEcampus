@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/tvDan"
+            android:id="@+id/tvDay"
             style="@style/TextAppearance.MaterialComponents.Headline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
 
 
         <TextView
-            android:id="@+id/tVVrijemePocetka"
+            android:id="@+id/tVTime"
             style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,12 +48,12 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvDan"
+            app:layout_constraintTop_toBottomOf="@id/tvDay"
             app:layout_constraintWidth_default="percent"
             tools:text="8:00 - 11:00" />
 
         <TextView
-            android:id="@+id/txtPredmet"
+            android:id="@+id/txtSubject"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -61,12 +61,12 @@
             android:textStyle=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tVVrijemePocetka"
+            app:layout_constraintTop_toBottomOf="@id/tVTime"
             app:layout_constraintWidth_default="percent" />
 
 
         <TextView
-            android:id="@+id/tVPredmet"
+            android:id="@+id/tVSubject"
             style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,13 +75,13 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtPredmet"
+            app:layout_constraintTop_toBottomOf="@id/txtSubject"
             app:layout_constraintWidth_default="percent"
             tools:text="POI_III_P1" />
 
 
         <TextView
-            android:id="@+id/txtTip"
+            android:id="@+id/txtType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -89,12 +89,12 @@
             android:textStyle=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tVPredmet"
+            app:layout_constraintTop_toBottomOf="@id/tVSubject"
             app:layout_constraintWidth_default="percent" />
 
 
         <TextView
-            android:id="@+id/tvTip"
+            android:id="@+id/tvType"
             style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,12 +103,12 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtTip"
+            app:layout_constraintTop_toBottomOf="@id/txtType"
             app:layout_constraintWidth_default="percent"
             tools:text="PREDAVANJE" />
 
         <TextView
-            android:id="@+id/txtVrsta"
+            android:id="@+id/txtAttendance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -116,12 +116,12 @@
             android:textStyle=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvTip"
+            app:layout_constraintTop_toBottomOf="@id/tvType"
             app:layout_constraintWidth_default="percent" />
 
 
         <TextView
-            android:id="@+id/tvVrsta"
+            android:id="@+id/tvAttendance"
             style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -130,13 +130,13 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtVrsta"
+            app:layout_constraintTop_toBottomOf="@id/txtAttendance"
             app:layout_constraintWidth_default="percent"
             tools:text="F2F" />
 
 
         <ImageView
-            android:id="@+id/txtRasporedNaslov"
+            android:id="@+id/imgEmpiricom"
             style="@style/TextAppearance.MaterialComponents.Headline4"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -146,7 +146,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvVrsta"
+            app:layout_constraintTop_toBottomOf="@id/tvAttendance"
             android:contentDescription="@string/main_logo" />
 
 

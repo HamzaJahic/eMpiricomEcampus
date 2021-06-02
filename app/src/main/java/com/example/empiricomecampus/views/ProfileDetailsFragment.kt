@@ -9,6 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.empiricomecampus.R
 import com.example.empiricomecampus.databinding.FragmentProfileDetailsBinding
 import com.example.empiricomecampus.utils.AlertDialogBuilders
+import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
 import com.example.empiricomecampus.viewmodels.MainActivityViewModel
 import com.example.empiricomecampus.viewmodels.ProfileDetailsViewModel
 import com.example.empiricomecampus.viewmodels.ProfileDetailsViewModelFactory
@@ -29,7 +30,7 @@ class ProfileDetailsFragment : Fragment() {
         val student = ProfileDetailsFragmentArgs.fromBundle(requireArguments()).profile
         val viewModelFactory = ProfileDetailsViewModelFactory(student)
 
-        if (MainActivityViewModel._admin.value!!) {
+        if (ADMIN.value!!) {
             setHasOptionsMenu(true)
         }
 

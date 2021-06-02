@@ -7,33 +7,18 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 
 import com.example.empiricomecampus.firebase.UsersFirebase
+import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
+import com.example.empiricomecampus.utils.Globals.Companion.USER_COURSE
+import com.example.empiricomecampus.utils.Globals.Companion.USER_ID
+import com.example.empiricomecampus.utils.Globals.Companion.USER_LASTNAME
+import com.example.empiricomecampus.utils.Globals.Companion.USER_NAME
+import com.example.empiricomecampus.utils.Globals.Companion.USER_SEMESTER
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import kotlinx.coroutines.launch
 
 class MainActivityViewModel(context: Context) : ViewModel() {
-
-    companion object {
-
-        private val _id = MutableLiveData<String>()
-        val id: LiveData<String>
-            get() = _id
-        private val _name = MutableLiveData<String>()
-        val name: LiveData<String>
-            get() = _name
-        private val _lastName = MutableLiveData<String>()
-        val lastName: LiveData<String>
-            get() = _lastName
-        private val _semester = MutableLiveData<String>()
-        val semester: LiveData<String>
-            get() = _semester
-        private val _course = MutableLiveData<String>()
-        val course: LiveData<String>
-            get() = _course
-
-        var _admin = MutableLiveData<Boolean?>()
-    }
 
     private val _imgUri = MutableLiveData<String?>()
     val imgUri: LiveData<String?>
@@ -46,8 +31,8 @@ class MainActivityViewModel(context: Context) : ViewModel() {
 
 
     init {
-        _id.value = idUser
-        _admin.value = admin
+        USER_ID.value = idUser
+        ADMIN.value = admin
         if (admin) {
             adminProfile()
         } else retrieveUserInfo(idUser!!)
@@ -64,10 +49,10 @@ class MainActivityViewModel(context: Context) : ViewModel() {
             userRefrence.addListenerForSingleValueEvent(object : ValueEventListener {
 
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    _name.value = snapshot.child("name").value.toString()
-                    _lastName.value = snapshot.child("lastName").value.toString()
-                    _semester.value = snapshot.child("semester").value.toString()
-                    _course.value = snapshot.child("course").value.toString()
+                    USER_NAME.value = snapshot.child("name").value.toString()
+                    USER_LASTNAME.value = snapshot.child("lastName").value.toString()
+                    USER_SEMESTER.value = snapshot.child("semester").value.toString()
+                    USER_COURSE.value = snapshot.child("course").value.toString()
 
                 }
 
@@ -82,16 +67,16 @@ class MainActivityViewModel(context: Context) : ViewModel() {
 
 
     private fun adminProfile() {
-        _name.value = "Admin"
-        _lastName.value = "Admin"
-        _semester.value = "I"
-        _course.value = "ADMIN"
+        USER_NAME.value = "Admin"
+        USER_LASTNAME.value = "Admin"
+        USER_SEMESTER.value = "I"
+        USER_COURSE.value = "ADMIN"
     }
 
 
     private fun getImg() {
 
-        val img = UsersFirebase.databaseReference.child(id.value.toString())
+        val img = UsersFirebase.databaseReference.child(USER_ID.value.toString())
 
         img.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

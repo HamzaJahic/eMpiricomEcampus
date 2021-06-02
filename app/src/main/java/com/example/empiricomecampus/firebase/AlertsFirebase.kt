@@ -11,7 +11,7 @@ class AlertsFirebase {
         val databaseReference: DatabaseReference = Firebase.database.reference.child("Alerts")
 
         fun uploadData(key: String, entry: Alert) {
-            databaseReference.child(key).child("id").setValue(entry)
+            databaseReference.child(key).setValue(entry)
 
         }
 

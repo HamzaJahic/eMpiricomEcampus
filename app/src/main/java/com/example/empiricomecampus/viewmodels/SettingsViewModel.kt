@@ -4,6 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.empiricomecampus.firebase.UsersFirebase
+import com.example.empiricomecampus.utils.Globals.Companion.USER_COURSE
+import com.example.empiricomecampus.utils.Globals.Companion.USER_ID
+import com.example.empiricomecampus.utils.Globals.Companion.USER_LASTNAME
+import com.example.empiricomecampus.utils.Globals.Companion.USER_NAME
+import com.example.empiricomecampus.utils.Globals.Companion.USER_SEMESTER
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -20,9 +25,13 @@ class SettingsViewModel : ViewModel() {
     val nameLastName: LiveData<String?>
         get() = _nameLastName
 
-    private val _semestar = MutableLiveData<String?>()
-    val semestar: LiveData<String?>
-        get() = _semestar
+    private val _semester = MutableLiveData<String?>()
+    val semester: LiveData<String?>
+        get() = _semester
+
+    private val _course = MutableLiveData<String?>()
+    val course: LiveData<String?>
+        get() = _course
 
     private val _navigateToChangeImg = MutableLiveData<Int?>()
     val navigateToChangeImg: LiveData<Int?>
@@ -38,9 +47,9 @@ class SettingsViewModel : ViewModel() {
 
     init {
         _nameLastName.value =
-            "${MainActivityViewModel.name.value} ${MainActivityViewModel.lastName.value}"
-        _semestar.value = "Semestar ${MainActivityViewModel.semester.value}"
-
+            "${USER_NAME.value} ${USER_LASTNAME.value}"
+        _semester.value = "Semestar ${USER_SEMESTER.value}"
+        _course.value = USER_COURSE.value
         getImg()
 
     }
@@ -75,7 +84,7 @@ class SettingsViewModel : ViewModel() {
 
     private fun getImg() {
 
-        val img = UsersFirebase.databaseReference.child(MainActivityViewModel.id.value.toString())
+        val img = UsersFirebase.databaseReference.child(USER_ID.value.toString())
 
         img.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

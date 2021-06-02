@@ -9,6 +9,7 @@ import com.example.empiricomecampus.R
 import com.example.empiricomecampus.databinding.FragmentAlertDetailsBinding
 import com.example.empiricomecampus.models.Alert
 import com.example.empiricomecampus.utils.AlertDialogBuilders
+import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
 import com.example.empiricomecampus.viewmodels.AlertDetailsViewModel
 import com.example.empiricomecampus.viewmodels.AlertDetailsViewModelFactory
 import com.example.empiricomecampus.viewmodels.MainActivityViewModel
@@ -31,7 +32,7 @@ class AlertsDetailsFragment : Fragment() {
         val alert = Alert()
         val viewModelFactory = AlertDetailsViewModelFactory(alert)
 
-        if (MainActivityViewModel._admin.value!!) {
+        if (ADMIN.value!!) {
             setHasOptionsMenu(true)
         }
 

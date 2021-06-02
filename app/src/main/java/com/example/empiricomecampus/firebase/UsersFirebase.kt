@@ -2,6 +2,7 @@ package com.example.empiricomecampus.firebase
 
 
 import com.example.empiricomecampus.models.Student
+import com.example.empiricomecampus.utils.Globals.Companion.USER_ID
 import com.example.empiricomecampus.viewmodels.MainActivityViewModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -19,7 +20,7 @@ class UsersFirebase {
         }
 
         fun changePass(currentPass: String, newPass: String, newPassAgain: String) {
-            val user = databaseReference.child(MainActivityViewModel.id.value.toString())
+            val user = databaseReference.child(USER_ID.value.toString())
 
             user.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {

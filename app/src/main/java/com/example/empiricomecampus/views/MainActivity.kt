@@ -16,6 +16,10 @@ import com.bumptech.glide.Glide
 import com.example.empiricomecampus.R
 import com.example.empiricomecampus.databinding.ActivityMainBinding
 import com.example.empiricomecampus.utils.Constants.Companion.TOPIC
+import com.example.empiricomecampus.utils.Globals.Companion.USER_COURSE
+import com.example.empiricomecampus.utils.Globals.Companion.USER_LASTNAME
+import com.example.empiricomecampus.utils.Globals.Companion.USER_NAME
+import com.example.empiricomecampus.utils.Globals.Companion.USER_SEMESTER
 import com.example.empiricomecampus.viewmodels.MainActivityViewModel
 import com.google.firebase.messaging.FirebaseMessaging
 
@@ -35,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_hostFragment) as NavHostFragment
-        val textView = binding.navView.getHeaderView(0).findViewById<TextView>(R.id.txtImeKorisnika)
+        val textView = binding.navView.getHeaderView(0).findViewById<TextView>(R.id.txtUserName)
         mainActivityViewModel = MainActivityViewModel(this)
 
         // app bar
@@ -60,27 +64,27 @@ class MainActivity : AppCompatActivity() {
         binding.viewModel = mainActivityViewModel
 
 
-        MainActivityViewModel.name.observe(this, {
-            textView.text = it
+       USER_NAME.observe(this, {
+            textView.text = getString(R.string.nav_draw_username, it, textView.text)
         })
 
-        MainActivityViewModel.lastName.observe(this, {
-            textView.text = "${textView.text} $it "
+        USER_LASTNAME.observe(this, {
+            textView.text = getString(R.string.nav_draw_username, textView.text, it)
         })
 
-        MainActivityViewModel.semester.observe(this, {
-            binding.navView.getHeaderView(0).findViewById<TextView>(R.id.txtSemestar).text =
-                "$it semestar"
+        USER_SEMESTER.observe(this, {
+            binding.navView.getHeaderView(0).findViewById<TextView>(R.id.txtSemester).text =
+                getString(R.string.nav_draw_semester, it)
         })
 
         mainActivityViewModel.imgUri.observe(this, {
             val imgView =
-                binding.navView.getHeaderView(0).findViewById<ImageView>(R.id.imgKorisnika)
+                binding.navView.getHeaderView(0).findViewById<ImageView>(R.id.imgUser)
             Glide.with(this).load(it).into(imgView)
         })
 
-        MainActivityViewModel.course.observe(this, {
-            binding.navView.getHeaderView(0).findViewById<TextView>(R.id.txtSmijer).text = it
+        USER_COURSE.observe(this, {
+            binding.navView.getHeaderView(0).findViewById<TextView>(R.id.txtCourse).text = it
         })
 
 

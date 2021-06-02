@@ -9,5 +9,6 @@ class Constants {
         const val TOPIC = "/topics/alertsTopic"
         const val DEFAULT_PHOTO =
             "https://firebasestorage.googleapis.com/v0/b/empirica-ecampus-app.appspot.com/o/default_profile_picture.jpg?alt=media&token=266361e7-c25a-4628-b5a1-feea75ed95c0"
+        const val GALLERY_REQUEST_CODE = 123
     }
 }

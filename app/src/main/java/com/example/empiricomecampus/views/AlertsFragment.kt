@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.empiricomecampus.adapters.AlertAdapter
 import com.example.empiricomecampus.databinding.FragmentAlertsBinding
+import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
 import com.example.empiricomecampus.viewmodels.AlertsViewModel
 import com.example.empiricomecampus.viewmodels.AlertsViewModelFactory
 import com.example.empiricomecampus.viewmodels.MainActivityViewModel
@@ -27,7 +28,7 @@ class AlertsFragment : Fragment() {
         _binding = FragmentAlertsBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        if (!MainActivityViewModel._admin.value!!) {
+        if (!ADMIN.value!!) {
             binding.fab.visibility = View.GONE
         }
 
@@ -41,7 +42,7 @@ class AlertsFragment : Fragment() {
         })
 
         binding.viewModel = alertsViewModel
-        binding.oglasiLista.adapter = adapter
+        binding.alertList.adapter = adapter
 
 
         alertsViewModel.navigateToAddAlert.observe(viewLifecycleOwner, {

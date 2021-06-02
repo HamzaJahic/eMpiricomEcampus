@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txtRasporedNaslov"
+            android:id="@+id/tvAddSchedule"
             style="@style/TextAppearance.MaterialComponents.Headline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,18 +35,18 @@
             app:layout_constraintGuide_begin="84dp" />
 
         <TextView
-            android:id="@+id/tVDan"
+            android:id="@+id/tvDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/dan"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/spinnerDan"
+            app:layout_constraintStart_toStartOf="@+id/spinnerDay"
             app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
 
         <Spinner
-            android:id="@+id/spinnerDan"
+            android:id="@+id/spinnerDay"
             style="@style/spinner_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -54,56 +54,56 @@
             android:entries="@array/days_of_the_week"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tVDan"
+            app:layout_constraintTop_toBottomOf="@+id/tvDay"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.9"
             tools:setOnItemSelectedListener="@{viewModel.dayListener}" />
 
 
         <TextView
-            android:id="@+id/tVSmijer"
+            android:id="@+id/tVCourse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/smijer"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/spinnerDan"
-            app:layout_constraintTop_toBottomOf="@id/spinnerDan" />
+            app:layout_constraintStart_toStartOf="@+id/spinnerDay"
+            app:layout_constraintTop_toBottomOf="@id/spinnerDay" />
 
 
         <Spinner
-            android:id="@+id/spinnerSmijer"
+            android:id="@+id/spinnerCourse"
             style="@style/spinner_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:entries="@array/course_name"
-            app:layout_constraintStart_toStartOf="@+id/spinnerDan"
-            app:layout_constraintTop_toBottomOf="@+id/tVSmijer"
+            app:layout_constraintStart_toStartOf="@+id/spinnerDay"
+            app:layout_constraintTop_toBottomOf="@+id/tVCourse"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.9"
             tools:setOnItemSelectedListener="@{viewModel.courseListener}" />
 
         <TextView
-            android:id="@+id/tVSemestar"
+            android:id="@+id/tVSemester"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/semestar"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/spinnerSmijer"
-            app:layout_constraintTop_toBottomOf="@id/spinnerSmijer" />
+            app:layout_constraintStart_toStartOf="@+id/spinnerCourse"
+            app:layout_constraintTop_toBottomOf="@id/spinnerCourse" />
 
 
         <Spinner
-            android:id="@+id/spinnerSemestar"
+            android:id="@+id/spinnerSemester"
             style="@style/spinner_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:entries="@array/semester"
-            app:layout_constraintStart_toStartOf="@+id/spinnerSmijer"
-            app:layout_constraintTop_toBottomOf="@+id/tVSemestar"
+            app:layout_constraintStart_toStartOf="@+id/spinnerCourse"
+            app:layout_constraintTop_toBottomOf="@+id/tVSemester"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.4"
             tools:setOnItemSelectedListener="@{viewModel.semesterListener}" />
@@ -117,7 +117,7 @@
             android:text="@string/predmet"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/spinnerPredmet"
-            app:layout_constraintTop_toBottomOf="@id/spinnerSmijer" />
+            app:layout_constraintTop_toBottomOf="@id/spinnerCourse" />
 
         <Spinner
             android:id="@+id/spinnerPredmet"
@@ -125,39 +125,39 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:entries="@array/subject_semestar_I_INI"
-            app:layout_constraintBottom_toBottomOf="@+id/spinnerSemestar"
-            app:layout_constraintEnd_toEndOf="@+id/spinnerDan"
-            app:layout_constraintTop_toTopOf="@+id/spinnerSemestar"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerSemester"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerDay"
+            app:layout_constraintTop_toTopOf="@+id/spinnerSemester"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.4"
             tools:setOnItemSelectedListener="@{viewModel.subjectListener}" />
 
         <TextView
-            android:id="@+id/tVVrijemePocetka"
+            android:id="@+id/tVBeginTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/vrijeme_pocetka"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/tVSemestar"
-            app:layout_constraintTop_toBottomOf="@id/spinnerSemestar" />
+            app:layout_constraintStart_toStartOf="@+id/tVSemester"
+            app:layout_constraintTop_toBottomOf="@id/spinnerSemester" />
 
         <Spinner
-            android:id="@+id/spinnerVrijemePocetka"
+            android:id="@+id/spinnerBeginTime"
             style="@style/spinner_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:entries="@array/start_time"
-            app:layout_constraintStart_toStartOf="@id/spinnerSemestar"
-            app:layout_constraintTop_toBottomOf="@+id/tVVrijemePocetka"
+            app:layout_constraintStart_toStartOf="@id/spinnerSemester"
+            app:layout_constraintTop_toBottomOf="@+id/tVBeginTime"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.4"
             tools:setOnItemSelectedListener="@{viewModel.startTimeListener}" />
 
 
         <TextView
-            android:id="@+id/tVVrijemeKraja"
+            android:id="@+id/tVEndTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -167,91 +167,81 @@
             app:layout_constraintTop_toBottomOf="@id/spinnerPredmet" />
 
         <Spinner
-            android:id="@+id/spinnerVrijemeKraja"
+            android:id="@+id/spinnerEndTime"
             style="@style/spinner_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:entries="@array/end_time"
-            app:layout_constraintBottom_toBottomOf="@+id/spinnerVrijemePocetka"
-            app:layout_constraintEnd_toEndOf="@+id/spinnerDan"
-            app:layout_constraintTop_toTopOf="@+id/spinnerVrijemePocetka"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerBeginTime"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerDay"
+            app:layout_constraintTop_toTopOf="@+id/spinnerBeginTime"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.4"
             tools:setOnItemSelectedListener="@{viewModel.endTimeListener}" />
 
         <TextView
-            android:id="@+id/tVTip"
+            android:id="@+id/tVType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/tip"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/tVVrijemePocetka"
-            app:layout_constraintTop_toBottomOf="@id/spinnerVrijemePocetka" />
+            app:layout_constraintStart_toStartOf="@+id/tVBeginTime"
+            app:layout_constraintTop_toBottomOf="@id/spinnerBeginTime" />
 
 
         <Spinner
-            android:id="@+id/spinnerTip"
+            android:id="@+id/spinnerType"
             style="@style/spinner_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:entries="@array/type"
-            app:layout_constraintStart_toStartOf="@id/spinnerVrijemePocetka"
-            app:layout_constraintTop_toBottomOf="@+id/tVTip"
+            app:layout_constraintStart_toStartOf="@id/spinnerBeginTime"
+            app:layout_constraintTop_toBottomOf="@+id/tVType"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.4"
             tools:setOnItemSelectedListener="@{viewModel.typeListener}" />
 
 
         <TextView
-            android:id="@+id/tVTipPrisustva"
+            android:id="@+id/tVAttendance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/tip_prisustva"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/tVVrijemeKraja"
-            app:layout_constraintTop_toBottomOf="@id/spinnerVrijemeKraja" />
+            app:layout_constraintStart_toStartOf="@+id/tVEndTime"
+            app:layout_constraintTop_toBottomOf="@id/spinnerEndTime" />
 
         <Spinner
-            android:id="@+id/spinnerTipPrisustva"
+            android:id="@+id/spinnerAttendance"
             style="@style/spinner_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:entries="@array/attendence"
-            app:layout_constraintBottom_toBottomOf="@+id/spinnerTip"
-            app:layout_constraintEnd_toEndOf="@+id/spinnerVrijemeKraja"
-            app:layout_constraintTop_toTopOf="@+id/spinnerTip"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerType"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerEndTime"
+            app:layout_constraintTop_toTopOf="@+id/spinnerType"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.4"
             tools:setOnItemSelectedListener="@{viewModel.attendanceListener}" />
 
         <Button
-            android:id="@+id/btnObjavi"
+            android:id="@+id/btnPost"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:onClick="@{()-> viewModel.uploadData()}"
             android:text="@string/objavi"
-            app:layout_constraintEnd_toEndOf="@+id/spinnerTipPrisustva"
-            app:layout_constraintStart_toStartOf="@id/spinnerTip"
-            app:layout_constraintTop_toBottomOf="@id/spinnerTip"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerAttendance"
+            app:layout_constraintStart_toStartOf="@id/spinnerType"
+            app:layout_constraintTop_toBottomOf="@id/spinnerType"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.9" />
 
 
-        <!--        <Button-->
-        <!--            android:layout_width="0dp"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="20dp"-->
-        <!--            android:text="Odustani"-->
-        <!--            app:layout_constraintStart_toStartOf="@id/btnObjavi"-->
-        <!--            app:layout_constraintEnd_toEndOf="@+id/btnObjavi"-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/btnObjavi"-->
-        <!--            app:layout_constraintWidth_default="percent"-->
-        <!--            app:layout_constraintWidth_percent="0.9"-->
-        <!--            android:onClick="@{()-> viewModel.navigateToRaspored()}"/>-->
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

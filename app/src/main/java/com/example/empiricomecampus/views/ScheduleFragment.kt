@@ -9,6 +9,9 @@ import com.example.empiricomecampus.R
 import com.example.empiricomecampus.adapters.ScheduleAdapter
 import com.example.empiricomecampus.databinding.FragmentScheduleBinding
 import com.example.empiricomecampus.models.Schedule
+import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
+import com.example.empiricomecampus.utils.Globals.Companion.USER_COURSE
+import com.example.empiricomecampus.utils.Globals.Companion.USER_SEMESTER
 import com.example.empiricomecampus.viewmodels.MainActivityViewModel
 import com.example.empiricomecampus.viewmodels.ScheduleViewModel
 import com.example.empiricomecampus.viewmodels.ScheduleViewModelFactory
@@ -20,8 +23,8 @@ class ScheduleFragment : Fragment() {
     lateinit var scheduleViewModel: ScheduleViewModel
     private lateinit var adapter: ScheduleAdapter
     private lateinit var options: FirebaseRecyclerOptions<Schedule>
-    var semester = MainActivityViewModel.semester.value.toString()
-    var course = MainActivityViewModel.course.value.toString()
+    var semester = USER_SEMESTER.value.toString()
+    var course = USER_COURSE.value.toString()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,11 +37,11 @@ class ScheduleFragment : Fragment() {
         scheduleViewModel =
             ViewModelProvider(this, viewModelFactory).get(ScheduleViewModel::class.java)
 
-        if (!MainActivityViewModel._admin.value!!) {
+        if (!ADMIN.value!!) {
             binding.fab.visibility = View.GONE
         }
 
-        if (MainActivityViewModel._admin.value!!) {
+        if (ADMIN.value!!) {
             setHasOptionsMenu(true)
         }
 
@@ -47,12 +50,9 @@ class ScheduleFragment : Fragment() {
 
 
         options = scheduleViewModel.setOptions(course, semester)
-        adapter = ScheduleAdapter(options, ScheduleAdapter.OnClickListener {
+        adapter = ScheduleAdapter(options,requireContext(), ScheduleAdapter.OnClickListener {
             scheduleViewModel.startNavigateToScheduleDetails(it)
         })
-
-
-
 
         scheduleViewModel.navigateToAddSchedule.observe(viewLifecycleOwner, {
             it?.let {
@@ -79,20 +79,20 @@ class ScheduleFragment : Fragment() {
             }
         })
 
-        MainActivityViewModel.semester.observe(viewLifecycleOwner, {
+        USER_SEMESTER.observe(viewLifecycleOwner, {
             semester = it
             val options = scheduleViewModel.setOptions(course, it)
-            adapter = ScheduleAdapter(options, ScheduleAdapter.OnClickListener {
+            adapter = ScheduleAdapter(options, requireContext(),ScheduleAdapter.OnClickListener {
                 scheduleViewModel.startNavigateToScheduleDetails(it)
             })
             binding.scheduleList.adapter = adapter
         })
 
 
-        MainActivityViewModel.course.observe(viewLifecycleOwner, {
+       USER_COURSE.observe(viewLifecycleOwner, {
             course = it
             val options = scheduleViewModel.setOptions(it, semester)
-            adapter = ScheduleAdapter(options, ScheduleAdapter.OnClickListener {
+            adapter = ScheduleAdapter(options,requireContext(), ScheduleAdapter.OnClickListener {
                 scheduleViewModel.startNavigateToScheduleDetails(it)
             })
             binding.scheduleList.adapter = adapter
@@ -154,7 +154,7 @@ class ScheduleFragment : Fragment() {
 
     private fun filterResults(semester: String?) {
         options = scheduleViewModel.setOptions(course, semester)
-        adapter = ScheduleAdapter(options, ScheduleAdapter.OnClickListener {
+        adapter = ScheduleAdapter(options,requireContext() ,ScheduleAdapter.OnClickListener {
             scheduleViewModel.startNavigateToScheduleDetails(it)
         })
         binding.scheduleList.adapter = adapter

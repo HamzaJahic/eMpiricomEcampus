@@ -54,6 +54,17 @@
     <string name="postavke">Postavke</string>
     <string name="profili">Profili</string>
     <string name="empirica_website">eMPIRICA WebSite</string>
+    <string name="i_semestar">I SEMESTAR</string>
+    <string name="ii_semestar">II SEMESTAR</string>
+    <string name="iii_semestar">III SEMESTAR</string>
+    <string name="iv_semestar">IV SEMESTAR</string>
+    <string name="v_semestar">V SEMESTAR</string>
+    <string name="vi_semestar">VI SEMESTAR</string>
+    <string name="vii_semestar">VII SEMESTAR</string>
+    <string name="viii_semestar">VIII SEMESTAR</string>
+    <string name="schedule_time">%1$s - %2$s</string>
+    <string name="nav_draw_username">%1$s %2$s</string>
+    <string name="nav_draw_semester">%1$s semestar</string>
 
 
     <string-array name="days_of_the_week">

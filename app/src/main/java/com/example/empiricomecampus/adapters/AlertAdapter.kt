@@ -24,7 +24,7 @@ class AlertAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(alert: Alert, onClickListener: OnClickListener) {
             binding.tVType.text = alert.type
-            binding.tvDetalji.text = alert.text
+            binding.tvDetails.text = alert.text
 
             binding.cardView.setOnClickListener {
                 onClickListener.onClick(alert)

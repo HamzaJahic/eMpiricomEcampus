@@ -7,7 +7,7 @@
     <data>
 
         <variable
-            name="viewModelPostavke"
+            name="viewModel"
             type="com.example.empiricomecampus.viewmodels.SettingsViewModel" />
 
     </data>
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="@{viewModelPostavke.nameLastName}"
+            android:text="@{viewModel.nameLastName}"
             android:textColor="@color/primaryTextColor"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="@{viewModelPostavke.semestar}"
+            android:text="@{viewModel.semester}"
             android:textColor="@color/primaryTextColor"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -59,16 +59,17 @@
             tools:text="Semester" />
 
         <TextView
-            android:id="@+id/tvSmijer"
+            android:id="@+id/tvCourse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:textColor="@color/primaryTextColor"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/tvName"
-            app:layout_constraintStart_toStartOf="@+id/tvName"
-            app:layout_constraintTop_toBottomOf="@id/tvName"
+            android:text="@{viewModel.course}"
+            app:layout_constraintEnd_toEndOf="@id/tvSemester"
+            app:layout_constraintStart_toStartOf="@+id/tvSemester"
+            app:layout_constraintTop_toBottomOf="@id/tvSemester"
             tools:text="Semester" />
 
 
@@ -77,7 +78,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
-            android:onClick="@{()-> viewModelPostavke.startNavigateToChangePass()}"
+            android:onClick="@{()-> viewModel.startNavigateToChangePass()}"
             android:text="@string/promijeni_password"
             app:layout_constraintEnd_toEndOf="@+id/tvSemester"
             app:layout_constraintStart_toStartOf="@id/tvSemester"
@@ -90,7 +91,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:onClick="@{()-> viewModelPostavke.startNavigateToChangeImg()}"
+            android:onClick="@{()-> viewModel.startNavigateToChangeImg()}"
             android:text="@string/promijeni_fotografiju"
             app:layout_constraintEnd_toEndOf="@+id/btnChange"
             app:layout_constraintStart_toStartOf="@id/btnChange"
@@ -103,7 +104,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:onClick="@{()-> viewModelPostavke.logOut()}"
+            android:onClick="@{()-> viewModel.logOut()}"
             android:text="@string/log_out"
             app:layout_constraintEnd_toEndOf="@+id/btnChaneImg"
             app:layout_constraintStart_toStartOf="@id/btnChaneImg"

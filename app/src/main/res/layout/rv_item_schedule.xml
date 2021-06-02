@@ -61,7 +61,7 @@
                 card_view:layout_constraintTop_toBottomOf="@id/tVDay" />
 
             <TextView
-                android:id="@+id/tVPredmet"
+                android:id="@+id/tVSubject"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -80,12 +80,12 @@
                 android:textColor="@color/secondaryTextColor"
                 android:textSize="15sp"
                 android:textStyle="italic|bold"
-                card_view:layout_constraintStart_toStartOf="@id/tVPredmet"
-                card_view:layout_constraintTop_toBottomOf="@+id/tVPredmet"
+                card_view:layout_constraintStart_toStartOf="@id/tVSubject"
+                card_view:layout_constraintTop_toBottomOf="@+id/tVSubject"
                 tools:text="LV" />
 
             <TextView
-                android:id="@+id/tVAttendence"
+                android:id="@+id/tVAttendance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -97,15 +97,15 @@
                 tools:text="F2F" />
 
             <TextView
-                android:id="@+id/tVSemestar"
+                android:id="@+id/tVSemester"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/secondaryTextColor"
                 android:textSize="15sp"
                 android:textStyle="italic|bold"
-                card_view:layout_constraintEnd_toEndOf="@id/tVAttendence"
-                card_view:layout_constraintTop_toBottomOf="@id/tVAttendence"
+                card_view:layout_constraintEnd_toEndOf="@id/tVAttendance"
+                card_view:layout_constraintTop_toBottomOf="@id/tVAttendance"
                 tools:text="IV" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,27 +3,27 @@
 
     <item
         android:id="@+id/iSemester"
-        android:title="I SEMESTAR" />
+        android:title="@string/i_semestar" />
     <item
         android:id="@+id/iiSemester"
-        android:title="II SEMESTAR" />
+        android:title="@string/ii_semestar" />
     <item
         android:id="@+id/iiiSemester"
-        android:title="III SEMESTAR" />
+        android:title="@string/iii_semestar" />
     <item
         android:id="@+id/ivSemester"
-        android:title="IV SEMESTAR" />
+        android:title="@string/iv_semestar" />
     <item
         android:id="@+id/vSemester"
-        android:title="V SEMESTAR" />
+        android:title="@string/v_semestar" />
     <item
         android:id="@+id/viSemester"
-        android:title="VI SEMESTAR" />
+        android:title="@string/vi_semestar" />
     <item
         android:id="@+id/viiSemester"
-        android:title="VII SEMESTAR" />
+        android:title="@string/vii_semestar" />
     <item
         android:id="@+id/viiiSemester"
-        android:title="VIII SEMESTAR" />
+        android:title="@string/viii_semestar" />
 
 </menu>

@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.empiricomecampus.R
 import com.example.empiricomecampus.databinding.FragmentScheduleDetailsBinding
 import com.example.empiricomecampus.utils.AlertDialogBuilders
+import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
 import com.example.empiricomecampus.viewmodels.MainActivityViewModel
 import com.example.empiricomecampus.viewmodels.ScheduleDetailsViewModel
 import com.example.empiricomecampus.viewmodels.ScheduleDetailsViewModelFactory
@@ -28,7 +29,7 @@ class ScheduleDetailsFragment : Fragment() {
         val schedule = ScheduleDetailsFragmentArgs.fromBundle(requireArguments()).schcedule
         val viewModelFactory = ScheduleDetailsViewModelFactory(schedule)
 
-        if (MainActivityViewModel._admin.value!!) {
+        if (ADMIN.value!!) {
             setHasOptionsMenu(true)
         }
 
@@ -54,7 +55,6 @@ class ScheduleDetailsFragment : Fragment() {
             }
 
         })
-
 
         return view
 
