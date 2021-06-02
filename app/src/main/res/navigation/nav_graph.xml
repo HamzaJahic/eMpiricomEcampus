@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/scheduleFragment">
+
+    <fragment
+        android:id="@+id/addProfileFragment"
+        android:name="com.example.empiricomecampus.views.AddProfileFragment"
+        android:label="Novi Profil">
+        <action
+            android:id="@+id/action_addProfileFragment_to_profilesFragment"
+            app:destination="@id/profilesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAlertFragment"
+        android:name="com.example.empiricomecampus.views.AddAlertFragment"
+        android:label="Novo Obavještenje">
+        <action
+            android:id="@+id/action_addAlertFragment_to_alertsFragment"
+            app:destination="@id/alertsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addScheduleFragment"
+        android:name="com.example.empiricomecampus.views.AddScheduleFragment"
+        android:label="Novi Raspored">
+        <action
+            android:id="@+id/action_addScheduleFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alertsFragment"
+        android:name="com.example.empiricomecampus.views.AlertsFragment"
+        android:label="Oglasna Ploča">
+        <action
+            android:id="@+id/action_alertsFragment_to_addAlertFragment"
+            app:destination="@id/addAlertFragment" />
+        <action
+            android:id="@+id/action_alertsFragment_to_alertsDetailsFragment"
+            app:destination="@id/alertsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePassFragment"
+        android:name="com.example.empiricomecampus.views.ChangePassFragment"
+        android:label="Promijeni Lozinku">
+        <action
+            android:id="@+id/action_changePassFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileDetailsFragment"
+        android:name="com.example.empiricomecampus.views.ProfileDetailsFragment"
+        android:label="Detalji">
+        <action
+            android:id="@+id/action_profileDetailsFragment_to_profilesFragment"
+            app:destination="@id/profilesFragment" />
+        <argument
+            android:name="profile"
+            app:argType="com.example.empiricomecampus.models.Student" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilesFragment"
+        android:name="com.example.empiricomecampus.views.ProfilesFragment"
+        android:label="Profili">
+        <action
+            android:id="@+id/action_profilesFragment_to_addProfileFragment"
+            app:destination="@id/addProfileFragment" />
+        <action
+            android:id="@+id/action_profilesFragment_to_profileDetailsFragment"
+            app:destination="@id/profileDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.empiricomecampus.views.ScheduleFragment"
+        android:label="Raspored">
+        <action
+            android:id="@+id/action_scheduleFragment_to_scheduleDetailsFragment"
+            app:destination="@id/scheduleDetailsFragment" />
+        <action
+            android:id="@+id/action_scheduleFragment_to_addScheduleFragment"
+            app:destination="@id/addScheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.empiricomecampus.views.SettingsFragment"
+        android:label="Postavke">
+        <action
+            android:id="@+id/action_settingsFragment_to_changePassFragment"
+            app:destination="@id/changePassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleDetailsFragment"
+        android:name="com.example.empiricomecampus.views.ScheduleDetailsFragment"
+        android:label="Detalji">
+        <action
+            android:id="@+id/action_scheduleDetailsFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+        <argument
+            android:name="schcedule"
+            app:argType="com.example.empiricomecampus.models.Schedule" />
+    </fragment>
+    <fragment
+        android:id="@+id/alertsDetailsFragment"
+        android:name="com.example.empiricomecampus.views.AlertsDetailsFragment"
+        android:label="Detalji">
+        <action
+            android:id="@+id/action_alertsDetailsFragment_to_alertsFragment"
+            app:destination="@id/alertsFragment" />
+        <argument
+            android:name="alert"
+            app:argType="com.example.empiricomecampus.models.Alert" />
+    </fragment>
+</navigation>

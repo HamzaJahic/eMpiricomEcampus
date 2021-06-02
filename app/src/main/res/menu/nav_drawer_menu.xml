@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/menuMain">
+        <item
+            android:id="@+id/scheduleFragment"
+            android:icon="@drawable/ic_schedule"
+            android:title="@string/raspored" />
+        <item
+            android:id="@+id/alertsFragment"
+            android:icon="@drawable/ic_information"
+            android:title="@string/oglasna_tabla" />
+    </group>
+
+    <group android:id="@+id/menuExtras">
+        <item
+            android:id="@+id/settingsFragment"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/postavke" />
+        <item
+            android:id="@+id/profilesFragment"
+            android:icon="@drawable/ic_users"
+            android:title="@string/profili" />
+        <item
+            android:id="@+id/empiricaWebsite"
+            android:icon="@drawable/ic_website"
+            android:title="@string/empirica_website" />
+
+
+    </group>
+
+
+</menu>

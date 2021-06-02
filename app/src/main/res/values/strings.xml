@@ -1,0 +1,316 @@
+<resources>
+    <string name="app_name">Empirica eCampus</string>
+
+    <string name="default_day">Ponedjeljak</string>
+    <string name="default_semester">I</string>
+    <string name="default_subject">P_I_INI</string>
+    <string name="default_startTime">8:00</string>
+    <string name="default_endTime">9:00</string>
+    <string name="default_type">P</string>
+    <string name="default_pass">empirica2021</string>
+    <string name="default_attendence">F2F</string>
+    <string name="course_ini">INI</string>
+    <string name="course_poi">POI</string>
+    <string name="gallery_type">image/*</string>
+    <string name="profile_type_professor">PROFESOR</string>
+    <string name="tip_profila">Tip profila:</string>
+    <string name="semestarAdd">Semestar:</string>
+    <string name="odustani">Odustani</string>
+    <string name="kreiraj">Kreiraj</string>
+    <string name="novi_profil">Novi Profil</string>
+    <string name="main_logo">Main Logo</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LogIn</string>
+    <string name="novo_obavjestenje">Novo Obavještenje</string>
+    <string name="tip_obavijesti">Tip obavijesti</string>
+    <string name="detalji">Detalji</string>
+    <string name="ime">Ime</string>
+    <string name="prezime">Prezime</string>
+    <string name="dodatak_rasporedu">Dodatak Rasporedu</string>
+    <string name="dan">Dan</string>
+    <string name="smijer">Smijer</string>
+    <string name="semestar">Semestar</string>
+    <string name="vrijeme_pocetka">Vrijeme početka</string>
+    <string name="vrijeme_kraja">Vrijeme kraja</string>
+    <string name="tip_prisustva">Tip prisustva</string>
+    <string name="objavi">Objavi</string>
+    <string name="floating_action_button">Floating Action Button</string>
+    <string name="login_caps">LOGIN</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="repeat_new_pass">Repeat New Password</string>
+    <string name="promijeni">Promijeni</string>
+    <string name="predmet">Predmet</string>
+    <string name="tip">Tip</string>
+    <string name="vrsta">Vrsta</string>
+    <string name="promijeni_password">Promijeni Password</string>
+    <string name="promijeni_fotografiju">Promijeni Fotografiju</string>
+    <string name="log_out">Log out</string>
+    <string name="alert_logo">Alert Logo</string>
+    <string name="delete">Delete</string>
+    <string name="raspored">Raspored</string>
+    <string name="oglasna_tabla">Oglasna tabla</string>
+    <string name="postavke">Postavke</string>
+    <string name="profili">Profili</string>
+    <string name="empirica_website">eMPIRICA WebSite</string>
+
+
+    <string-array name="days_of_the_week">
+        <item>Ponedjeljak</item>
+        <item>Utorak</item>
+        <item>Srijeda</item>
+        <item>Četvrtak</item>
+        <item>Petak</item>
+    </string-array>
+
+    <string-array name="semester">
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+        <item>IV</item>
+        <item>V</item>
+        <item>VI</item>
+        <item>VII</item>
+        <item>VIII</item>
+    </string-array>
+
+    <string-array name="raspored_sorting">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_I_INI">
+        <item>P_I_INI</item>
+        <item>P_I_INI2</item>
+        <item>P_I_INI3</item>
+        <item>P_I_INI4</item>
+        <item>P_I_INI5</item>
+    </string-array>
+
+
+    <string-array name="subject_semestar_II_INI">
+        <item>P_II_INI</item>
+        <item>P_II_INI2</item>
+        <item>P_II_INI3</item>
+        <item>P_II_INI4</item>
+        <item>P_II_INI5</item>
+
+    </string-array>
+
+
+    <string-array name="subject_semestar_III_INI">
+        <item>P_III_INI</item>
+        <item>P_III_INI2</item>
+        <item>P_III_INI3</item>
+        <item>P_III_INI4</item>
+        <item>P_III_INI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_IV_INI">
+        <item>P_IV_INI</item>
+        <item>P_IV_INI2</item>
+        <item>P_IV_INI3</item>
+        <item>P_IV_INI4</item>
+        <item>P_IV_INI5</item>
+    </string-array>
+    <string-array name="subject_semestar_V_INI">
+        <item>P_V_INI</item>
+        <item>P_V_INI2</item>
+        <item>P_V_INI3</item>
+        <item>P_V_INI4</item>
+        <item>P_V_INI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_VI_INI">
+        <item>P_VI_INI</item>
+        <item>P_VI_INI2</item>
+        <item>P_VI_INI3</item>
+        <item>P_VI_INI4</item>
+        <item>P_VI_INI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_VII_INI">
+        <item>P_VII_INI</item>
+        <item>P_VII_INI2</item>
+        <item>P_VII_INI3</item>
+        <item>P_VII_INI4</item>
+        <item>P_VII_INI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_VIII_INI">
+        <item>P_VIII_INI</item>
+        <item>P_VIII_INI2</item>
+        <item>P_VIII_INI3</item>
+        <item>P_VIII_INI4</item>
+        <item>P_VIII_INI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_I_POI">
+        <item>P_I_POI</item>
+        <item>P_I_POI2</item>
+        <item>P_I_POI3</item>
+        <item>P_I_POI4</item>
+        <item>P_I_POI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_II_POI">
+        <item>P_II_POI</item>
+        <item>P_II_POI2</item>
+        <item>P_II_POI3</item>
+        <item>P_II_POI4</item>
+        <item>P_II_POI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_III_POI">
+        <item>P_III_POI</item>
+        <item>P_III_POI2</item>
+        <item>P_III_POI3</item>
+        <item>P_III_POI4</item>
+        <item>P_III_POI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_IV_POI">
+        <item>P_IV_POI</item>
+        <item>P_IV_POI2</item>
+        <item>P_IV_POI3</item>
+        <item>P_IV_POI4</item>
+        <item>P_IV_POI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_V_POI">
+        <item>P_V_POI</item>
+        <item>P_V_POI2</item>
+        <item>P_V_POI3</item>
+        <item>P_V_POI4</item>
+        <item>P_V_POI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_VI_POI">
+        <item>P_VI_POI</item>
+        <item>P_VI_POI2</item>
+        <item>P_VI_POI3</item>
+        <item>P_VI_POI4</item>
+        <item>P_VI_POI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_VII_POI">
+        <item>P_VII_POI</item>
+        <item>P_VII_POI2</item>
+        <item>P_VII_POI3</item>
+        <item>P_VII_POI4</item>
+        <item>P_VII_POI5</item>
+    </string-array>
+
+    <string-array name="subject_semestar_VIII_POI">
+        <item>P_VIII_POI</item>
+        <item>P_VIII_POI2</item>
+        <item>P_VIII_POI3</item>
+        <item>P_VIII_POI4</item>
+        <item>P_VIII_POI5</item>
+    </string-array>
+
+
+    <string-array name="start_time">
+        <item>8:00</item>
+        <item>8:30</item>
+        <item>9:00</item>
+        <item>9:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+    </string-array>
+
+    <string-array name="end_time">
+        <item>9:00</item>
+        <item>9:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+        <item>13:00</item>
+        <item>13:30</item>
+        <item>14:00</item>
+        <item>14:30</item>
+        <item>15:00</item>
+        <item>15:30</item>
+        <item>16:00</item>
+        <item>16:30</item>
+        <item>17:00</item>
+        <item>17:30</item>
+        <item>18:00</item>
+        <item>18:30</item>
+        <item>19:00</item>
+        <item>19:30</item>
+        <item>20:00</item>
+    </string-array>
+
+
+    <string-array name="type">
+        <item>P</item>
+        <item>AV</item>
+        <item>LV</item>
+        <item>ZPI</item>
+        <item>ZUI</item>
+        <item>T-I</item>
+        <item>T-II</item>
+    </string-array>
+
+
+    <string-array name="attendence">
+        <item>F2F</item>
+        <item>WebEx</item>
+    </string-array>
+
+    <string-array name="alert_type">
+        <item>OBAVJEŠTENJE!</item>
+        <item>UPOZORENJE!</item>
+    </string-array>
+
+
+    <string-array name="course_name">
+        <item>INI</item>
+        <item>POI</item>
+    </string-array>
+
+    <string-array name="profile_type">
+        <item>PROFESOR</item>
+        <item>STUDENT</item>
+    </string-array>
+
+    <string-array name="message_reciever">
+        <item>I SEMESTAR</item>
+        <item>II SEMESTAR</item>
+        <item>III SEMESTAR</item>
+        <item>IV SEMESTAR</item>
+        <item>V SEMESTAR</item>
+        <item>VI SEMESTAR</item>
+        <item>VII SEMESTAR</item>
+        <item>VIII SEMESTAR</item>
+        <item>ADMIN</item>
+    </string-array>
+
+
+</resources>

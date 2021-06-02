@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "969674889364",
+    "firebase_url": "https://empirica-ecampus-app-default-rtdb.firebaseio.com",
+    "project_id": "empirica-ecampus-app",
+    "storage_bucket": "empirica-ecampus-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969674889364:android:f31a4c74c4e01a1dcbfc81",
+        "android_client_info": {
+          "package_name": "com.example.empiricaecampusapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969674889364-7gaj9e4k3c2o5km9c9ed3ttl0auu3r7i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.empiricaecampusapp",
+            "certificate_hash": "ebe041d0456203e116eb195707ffa32f133f25b6"
+          }
+        },
+        {
+          "client_id": "969674889364-mvhgccatarqmvka214b8deilimejidnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqrjjqohXheLwtdDx7I_eQKxCZicBRBAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969674889364-mvhgccatarqmvka214b8deilimejidnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969674889364:android:92045c024f33d03fcbfc81",
+        "android_client_info": {
+          "package_name": "com.example.empiricomecampus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969674889364-mvhgccatarqmvka214b8deilimejidnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqrjjqohXheLwtdDx7I_eQKxCZicBRBAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969674889364-mvhgccatarqmvka214b8deilimejidnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

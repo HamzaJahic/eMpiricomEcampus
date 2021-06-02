@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@color/primaryColor"
+            android:padding="10dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/imgObavjestenje"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/alert_logo"
+                android:rotation="-45"
+                android:src="@drawable/ic_information"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tVType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                card_view:layout_constraintStart_toEndOf="@id/imgObavjestenje"
+                card_view:layout_constraintTop_toTopOf="parent"
+                tools:text="OGLAS" />
+
+
+            <View
+                android:id="@+id/horizontalDevider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="3dp"
+                android:background="@color/primaryTextColor"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@id/tVType" />
+
+            <TextView
+                android:id="@+id/tvDetalji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                card_view:layout_constraintStart_toStartOf="@id/imgObavjestenje"
+                card_view:layout_constraintTop_toBottomOf="@+id/horizontalDevider"
+                tools:text="POI" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

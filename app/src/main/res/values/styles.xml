@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="nav_name_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="nav_detail_text">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/spinner_borders</item>
+        <item name="android:padding">18dp</item>
+    </style>
+</resources>
