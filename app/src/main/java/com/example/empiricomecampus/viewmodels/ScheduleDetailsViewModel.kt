@@ -40,7 +40,10 @@ class ScheduleDetailsViewModel(val schedule: Schedule) : ViewModel() {
     fun deleteEntry() {
         val entryId = schedule.id.toString()
         viewModelScope.launch {
-            ScheduleFirebase.databaseReference.child(entryId).removeValue()
+            ScheduleFirebase.databaseReference.child(schedule.course.toString())
+                .child(schedule.semester.toString()).child(entryId).removeValue()
+            ScheduleFirebase.databaseReference.child("ADMIN")
+                .child(schedule.semester.toString()).child(entryId).removeValue()
             navigateToschedule()
         }
 

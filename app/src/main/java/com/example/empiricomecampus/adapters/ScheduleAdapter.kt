@@ -25,7 +25,7 @@ class ScheduleAdapter(
 
     class ScheduleHolder(private var binding: RvItemScheduleBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(schedule: Schedule,context: Context) {
+        fun bind(schedule: Schedule,context: Context, onClickListener: OnClickListener) {
             binding.tVDay.text = schedule.day
             binding.tVSemester.text = schedule.semester
             binding.tVSubject.text = schedule.subject
@@ -47,8 +47,14 @@ class ScheduleAdapter(
                     else -> Color.parseColor("#34e5eb")
                 }
             )
+            binding.cardView.setOnClickListener {
+                onClickListener.onClick(schedule)
+            }
+
 
         }
+
+
     }
 
 
@@ -59,10 +65,8 @@ class ScheduleAdapter(
 
     override fun onBindViewHolder(holder: ScheduleHolder, position: Int, model: Schedule) {
         val item = getItem(position)
-        holder.bind(item, context)
-        holder.itemView.setOnClickListener {
-            onClickListener.onClick(item)
-        }
+        holder.bind(item, context, onClickListener)
+
 
     }
 
