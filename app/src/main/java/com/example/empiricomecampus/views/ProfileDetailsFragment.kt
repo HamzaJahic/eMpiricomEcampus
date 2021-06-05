@@ -9,8 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.empiricomecampus.R
 import com.example.empiricomecampus.databinding.FragmentProfileDetailsBinding
 import com.example.empiricomecampus.utils.AlertDialogBuilders
-import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
-import com.example.empiricomecampus.viewmodels.MainActivityViewModel
+import com.example.empiricomecampus.utils.Globals.ADMIN
 import com.example.empiricomecampus.viewmodels.ProfileDetailsViewModel
 import com.example.empiricomecampus.viewmodels.ProfileDetailsViewModelFactory
 
@@ -39,8 +38,6 @@ class ProfileDetailsFragment : Fragment() {
         )
 
         binding.viewModel = profileDetailsViewModel
-
-
 
         profileDetailsViewModel.showAlertDialog.observe(viewLifecycleOwner, {
             it?.let {

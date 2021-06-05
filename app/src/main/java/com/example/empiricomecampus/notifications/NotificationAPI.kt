@@ -1,7 +1,7 @@
 package com.example.empiricomecampus.notifications
 
-import com.example.empiricomecampus.utils.Constants.Companion.CONTENT_TYPE
-import com.example.empiricomecampus.utils.Constants.Companion.SERVER_KEY
+import com.example.empiricomecampus.utils.Constants.CONTENT_TYPE
+import com.example.empiricomecampus.utils.Constants.SERVER_KEY
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body

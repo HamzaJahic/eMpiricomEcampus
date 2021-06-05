@@ -25,7 +25,6 @@ class AlertDetailsViewModel(alert: Alert) : ViewModel() {
         _alert.value = alert
     }
 
-
     fun deleteEntry() {
         val entryId = _alert.value?.id.toString()
         AlertsFirebase.databaseReference.child(entryId).removeValue()
@@ -49,5 +48,4 @@ class AlertDetailsViewModel(alert: Alert) : ViewModel() {
     private fun doneNavigate() {
         _navigateToAlerts.value = null
     }
-
 }

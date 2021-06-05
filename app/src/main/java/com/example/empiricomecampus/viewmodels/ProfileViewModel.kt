@@ -27,7 +27,6 @@ class ProfileViewModel : ViewModel() {
 
     }
 
-
     fun startNavigateToProfileDetails(student: Student) {
         _navigateToProfileDetails.value = student
         doneNavigatingDetails()
@@ -36,7 +35,6 @@ class ProfileViewModel : ViewModel() {
     private fun doneNavigatingDetails() {
         _navigateToProfileDetails.value = null
     }
-
 
     fun startNavigateToAddProfile() {
         _navigateToAddProfile.value = true

@@ -10,7 +10,6 @@ import kotlinx.coroutines.launch
 
 class ProfileDetailsViewModel(private val student: Student) : ViewModel() {
 
-
     val studentHolder = student
 
     private val _navigateToProfiles = MutableLiveData<Boolean?>()

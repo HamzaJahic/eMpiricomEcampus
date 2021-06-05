@@ -12,6 +12,7 @@ import com.example.empiricomecampus.viewmodels.LoginViewModelFactory
 import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,6 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(binding.root)
         binding.viewModel = loginViewModel
-
 
         loginViewModel.navigateToSchedule.observe(this, {
             it?.let {

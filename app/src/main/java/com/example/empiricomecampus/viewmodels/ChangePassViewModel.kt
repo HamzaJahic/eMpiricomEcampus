@@ -8,17 +8,11 @@ import kotlinx.coroutines.launch
 
 class ChangePassViewModel : ViewModel() {
 
-
     //Deklaracija varijablih za upload profila
     val currentPass = MutableLiveData<String>()
     val newPass = MutableLiveData<String>()
     val newPassAgain = MutableLiveData<String>()
-
-
     //Kraj deklaracije
-
-
-
 
     fun changePass() {
 
@@ -32,7 +26,6 @@ class ChangePassViewModel : ViewModel() {
 
 
     }
-
 
 
 }

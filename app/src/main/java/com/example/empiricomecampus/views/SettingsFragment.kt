@@ -17,9 +17,9 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.empiricomecampus.databinding.FragmentSettingsBinding
 import com.example.empiricomecampus.firebase.UsersFirebase
-import com.example.empiricomecampus.utils.Constants.Companion.GALLERY_REQUEST_CODE
-import com.example.empiricomecampus.utils.Globals.Companion.USER_ID
-import com.example.empiricomecampus.utils.Globals.Companion.USER_NAME
+import com.example.empiricomecampus.utils.Constants.GALLERY_REQUEST_CODE
+import com.example.empiricomecampus.utils.Globals.USER_ID
+import com.example.empiricomecampus.utils.Globals.USER_NAME
 import com.example.empiricomecampus.viewmodels.SettingsViewModel
 import com.example.empiricomecampus.viewmodels.SettingsViewModelFactory
 import com.google.firebase.storage.FirebaseStorage

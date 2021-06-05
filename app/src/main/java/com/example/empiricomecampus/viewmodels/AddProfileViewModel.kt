@@ -8,18 +8,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.empiricomecampus.firebase.UsersFirebase
 import com.example.empiricomecampus.models.Student
-import com.example.empiricomecampus.utils.Constants.Companion.DEFAULT_PHOTO
-
+import com.example.empiricomecampus.utils.Constants.DEFAULT_PHOTO
 import kotlinx.coroutines.launch
 
 class AddProfileViewModel : ViewModel() {
 
-
     //Deklaracija varijablih za upload profila
     val name = MutableLiveData<String>()
-
     val lastName = MutableLiveData<String>()
-
     private val _semester = MutableLiveData<String>()
     val semester: LiveData<String>
         get() = _semester
@@ -55,13 +51,11 @@ class AddProfileViewModel : ViewModel() {
     }
     //Kraj listenera
 
-
     //upload podataka
     fun uploadData() {
         val user = UsersFirebase.databaseReference
 
         val entryID = user.push().key.toString()
-
 
         viewModelScope.launch {
 
@@ -76,7 +70,6 @@ class AddProfileViewModel : ViewModel() {
                 _semester.value,
             )
             UsersFirebase.uploadData(entryID, studentEntry)
-
         }
 
     }

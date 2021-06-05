@@ -2,7 +2,6 @@ package com.example.empiricomecampus.adapters
 
 import android.content.Context
 import android.graphics.Color
-import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.LiveData
@@ -25,13 +24,14 @@ class ScheduleAdapter(
 
     class ScheduleHolder(private var binding: RvItemScheduleBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(schedule: Schedule,context: Context, onClickListener: OnClickListener) {
+        fun bind(schedule: Schedule, context: Context, onClickListener: OnClickListener) {
             binding.tVDay.text = schedule.day
             binding.tVSemester.text = schedule.semester
             binding.tVSubject.text = schedule.subject
             binding.tVTip.text = schedule.type
             binding.tVAttendance.text = schedule.attendance
-            binding.tVTime.text = context.getString(R.string.schedule_time, schedule.startTime, schedule.endTime)
+            binding.tVTime.text =
+                context.getString(R.string.schedule_time, schedule.startTime, schedule.endTime)
             binding.tVAttendance.setTextColor(
                 when (schedule.attendance) {
                     "F2F" -> Color.parseColor("#0000FF")

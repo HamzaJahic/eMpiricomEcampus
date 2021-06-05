@@ -2,18 +2,16 @@ package com.example.empiricomecampus.utils
 
 import androidx.lifecycle.MutableLiveData
 
-class Globals {
-    companion object {
-        val USER_ID = MutableLiveData<String>()
+object Globals {
+    val USER_ID = MutableLiveData<String>()
 
-        val USER_NAME = MutableLiveData<String>()
+    val USER_NAME = MutableLiveData<String>()
 
-        val USER_LASTNAME = MutableLiveData<String>()
+    val USER_LASTNAME = MutableLiveData<String>()
 
-        val USER_SEMESTER = MutableLiveData<String>()
+    val USER_SEMESTER = MutableLiveData<String>()
 
-        val USER_COURSE = MutableLiveData<String>()
+    val USER_COURSE = MutableLiveData<String>()
 
-        var ADMIN = MutableLiveData<Boolean?>()
-    }
+    var ADMIN = MutableLiveData<Boolean?>()
 }

@@ -15,13 +15,13 @@ import kotlinx.coroutines.launch
 
 class LoginViewModel(context: Context) : ViewModel() {
 
-
     //Deklaracija varijablih za upload profila
     val userName = MutableLiveData<String?>()
     val password = MutableLiveData<String?>()
     var idUser = String()
 
-    private val sharedPreferences: SharedPreferences? = context.getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
+    private val sharedPreferences: SharedPreferences? =
+        context.getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
     val editor = sharedPreferences?.edit()
 
     private val _navigateToSchedule = MutableLiveData<Boolean?>()
@@ -32,7 +32,6 @@ class LoginViewModel(context: Context) : ViewModel() {
 
     private val _showError = MutableLiveData<Boolean?>()
     val showError: LiveData<Boolean?> get() = _showError
-
 
     fun loginUser() {
         val entry = Student("", userName.value, password.value, "", "", "", "", "")
@@ -68,7 +67,6 @@ class LoginViewModel(context: Context) : ViewModel() {
 
                 }
 
-
             }
             )
         }
@@ -93,7 +91,6 @@ class LoginViewModel(context: Context) : ViewModel() {
     fun showError() {
         _showError.value = true
         endShowError()
-
     }
 
     fun endShowError() {

@@ -9,10 +9,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.empiricomecampus.adapters.AlertAdapter
 import com.example.empiricomecampus.databinding.FragmentAlertsBinding
-import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
+import com.example.empiricomecampus.utils.Globals.ADMIN
 import com.example.empiricomecampus.viewmodels.AlertsViewModel
 import com.example.empiricomecampus.viewmodels.AlertsViewModelFactory
-import com.example.empiricomecampus.viewmodels.MainActivityViewModel
 
 class AlertsFragment : Fragment() {
 
@@ -32,7 +31,6 @@ class AlertsFragment : Fragment() {
             binding.fab.visibility = View.GONE
         }
 
-
         val viewModelFactory = AlertsViewModelFactory(this)
         val alertsViewModel =
             ViewModelProvider(this, viewModelFactory).get(AlertsViewModel::class.java)
@@ -43,7 +41,6 @@ class AlertsFragment : Fragment() {
 
         binding.viewModel = alertsViewModel
         binding.alertList.adapter = adapter
-
 
         alertsViewModel.navigateToAddAlert.observe(viewLifecycleOwner, {
             it?.let {

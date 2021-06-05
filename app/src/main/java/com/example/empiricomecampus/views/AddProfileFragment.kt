@@ -40,13 +40,9 @@ class AddProfileFragment : Fragment() {
             }
         })
 
-
-
-
         return view
 
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

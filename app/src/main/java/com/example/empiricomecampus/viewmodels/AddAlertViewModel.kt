@@ -11,7 +11,7 @@ import com.example.empiricomecampus.firebase.AlertsFirebase
 import com.example.empiricomecampus.models.Alert
 import com.example.empiricomecampus.notifications.PushNotification
 import com.example.empiricomecampus.notifications.RetrofitInstance
-import com.example.empiricomecampus.utils.Constants.Companion.TOPIC
+import com.example.empiricomecampus.utils.Constants.TOPIC
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -65,7 +65,6 @@ class AddAlertViewModel : ViewModel() {
 
 
     }
-
 
     //funkcije za navigaciju
     fun navigateToAlerts() {

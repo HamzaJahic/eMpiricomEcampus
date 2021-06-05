@@ -8,8 +8,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.empiricomecampus.R
 import com.example.empiricomecampus.databinding.FragmentScheduleDetailsBinding
 import com.example.empiricomecampus.utils.AlertDialogBuilders
-import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
-import com.example.empiricomecampus.viewmodels.MainActivityViewModel
+import com.example.empiricomecampus.utils.Globals.ADMIN
 import com.example.empiricomecampus.viewmodels.ScheduleDetailsViewModel
 import com.example.empiricomecampus.viewmodels.ScheduleDetailsViewModelFactory
 
@@ -55,11 +54,8 @@ class ScheduleDetailsFragment : Fragment() {
             }
 
         })
-
         return view
-
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

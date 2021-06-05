@@ -15,11 +15,11 @@ import androidx.navigation.ui.setupWithNavController
 import com.bumptech.glide.Glide
 import com.example.empiricomecampus.R
 import com.example.empiricomecampus.databinding.ActivityMainBinding
-import com.example.empiricomecampus.utils.Constants.Companion.TOPIC
-import com.example.empiricomecampus.utils.Globals.Companion.USER_COURSE
-import com.example.empiricomecampus.utils.Globals.Companion.USER_LASTNAME
-import com.example.empiricomecampus.utils.Globals.Companion.USER_NAME
-import com.example.empiricomecampus.utils.Globals.Companion.USER_SEMESTER
+import com.example.empiricomecampus.utils.Constants.TOPIC
+import com.example.empiricomecampus.utils.Globals.USER_COURSE
+import com.example.empiricomecampus.utils.Globals.USER_LASTNAME
+import com.example.empiricomecampus.utils.Globals.USER_NAME
+import com.example.empiricomecampus.utils.Globals.USER_SEMESTER
 import com.example.empiricomecampus.viewmodels.MainActivityViewModel
 import com.google.firebase.messaging.FirebaseMessaging
 
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         binding.viewModel = mainActivityViewModel
 
 
-       USER_NAME.observe(this, {
+        USER_NAME.observe(this, {
             textView.text = getString(R.string.nav_draw_username, it, textView.text)
         })
 
@@ -91,7 +91,6 @@ class MainActivity : AppCompatActivity() {
         if (!mainActivityViewModel.admin) {
             binding.navView.menu.removeItem(R.id.profilesFragment)
         }
-
 
         binding.navView.setupWithNavController(navController)
 

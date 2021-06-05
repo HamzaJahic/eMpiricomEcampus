@@ -7,19 +7,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.empiricomecampus.R
 import com.example.empiricomecampus.databinding.FragmentAlertDetailsBinding
-import com.example.empiricomecampus.models.Alert
 import com.example.empiricomecampus.utils.AlertDialogBuilders
-import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
+import com.example.empiricomecampus.utils.Globals.ADMIN
 import com.example.empiricomecampus.viewmodels.AlertDetailsViewModel
 import com.example.empiricomecampus.viewmodels.AlertDetailsViewModelFactory
-import com.example.empiricomecampus.viewmodels.MainActivityViewModel
 
 class AlertsDetailsFragment : Fragment() {
 
     private var _binding: FragmentAlertDetailsBinding? = null
     private val binding get() = _binding!!
     private lateinit var alertsDetailsViewModel: AlertDetailsViewModel
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,7 +26,7 @@ class AlertsDetailsFragment : Fragment() {
 
         _binding = FragmentAlertDetailsBinding.inflate(inflater, container, false)
         val view = binding.root
-        val alert = Alert()
+        val alert = AlertsDetailsFragmentArgs.fromBundle(requireArguments()).alert
         val viewModelFactory = AlertDetailsViewModelFactory(alert)
 
         if (ADMIN.value!!) {

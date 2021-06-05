@@ -19,7 +19,6 @@ enum class ScheduleSort(val value: String) {
     PETAK("5")
 }
 
-
 class AddScheduleViewModel : ViewModel() {
 
 
@@ -87,7 +86,6 @@ class AddScheduleViewModel : ViewModel() {
             }
         }
     }
-
 
     val semesterListener = object : AdapterView.OnItemSelectedListener {
         override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -175,9 +173,7 @@ class AddScheduleViewModel : ViewModel() {
             ScheduleFirebase.uploadData(entryID, entry)
         }
 
-
     }
-
 
     //funkcije za navigaciju
     fun navigateToSchedule() {

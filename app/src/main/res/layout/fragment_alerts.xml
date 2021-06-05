@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
-            android:onClick="@{()-> viewModel.startNavigateToAddObavjestnje()}"
+            android:onClick="@{()-> viewModel.startNavigateToAddAlert()}"
             android:src="@drawable/ic_add"
             android:contentDescription="@string/floating_action_button" />
 

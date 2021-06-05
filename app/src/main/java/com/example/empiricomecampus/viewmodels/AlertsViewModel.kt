@@ -12,7 +12,6 @@ import com.firebase.ui.database.FirebaseRecyclerOptions
 
 class AlertsViewModel(lifecycleOwner: LifecycleOwner) : ViewModel() {
 
-
     private val _navigateToAddAlert = MutableLiveData<Boolean?>()
     val navigateToAddAlert: LiveData<Boolean?>
         get() = _navigateToAddAlert
@@ -26,21 +25,21 @@ class AlertsViewModel(lifecycleOwner: LifecycleOwner) : ViewModel() {
         .setLifecycleOwner(lifecycleOwner)
         .build()
 
-
     fun startNavigateToAlertDetails(alert: Alert) {
         _navigateToAlertDetails.value = alert
-
+        doneNavigatingToAlertDetails()
     }
 
     fun doneNavigatingToAlertDetails() {
         _navigateToAlertDetails.value = null
     }
 
-    fun startNavigateToAddObavjestnje() {
+    fun startNavigateToAddAlert() {
         _navigateToAddAlert.value = true
+        doneNavigating()
     }
 
-    fun doneNavigating() {
+    private fun doneNavigating() {
         _navigateToAddAlert.value = null
     }
 

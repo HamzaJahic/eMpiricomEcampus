@@ -13,7 +13,6 @@ class HelperActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHelperBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHelperBinding.inflate(layoutInflater)
@@ -24,7 +23,6 @@ class HelperActivity : AppCompatActivity() {
 
         val view = binding.root
         setContentView(view)
-
 
         fun tokenCheck() {
             if (token) {
@@ -41,7 +39,6 @@ class HelperActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
 
         Timer("SettingUp", false).schedule(1500) {
             tokenCheck()

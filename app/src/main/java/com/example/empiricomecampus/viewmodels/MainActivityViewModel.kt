@@ -5,14 +5,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-
 import com.example.empiricomecampus.firebase.UsersFirebase
-import com.example.empiricomecampus.utils.Globals.Companion.ADMIN
-import com.example.empiricomecampus.utils.Globals.Companion.USER_COURSE
-import com.example.empiricomecampus.utils.Globals.Companion.USER_ID
-import com.example.empiricomecampus.utils.Globals.Companion.USER_LASTNAME
-import com.example.empiricomecampus.utils.Globals.Companion.USER_NAME
-import com.example.empiricomecampus.utils.Globals.Companion.USER_SEMESTER
+import com.example.empiricomecampus.utils.Globals.ADMIN
+import com.example.empiricomecampus.utils.Globals.USER_COURSE
+import com.example.empiricomecampus.utils.Globals.USER_ID
+import com.example.empiricomecampus.utils.Globals.USER_LASTNAME
+import com.example.empiricomecampus.utils.Globals.USER_NAME
+import com.example.empiricomecampus.utils.Globals.USER_SEMESTER
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -64,7 +63,6 @@ class MainActivityViewModel(context: Context) : ViewModel() {
         }
 
     }
-
 
     private fun adminProfile() {
         USER_NAME.value = "Admin"

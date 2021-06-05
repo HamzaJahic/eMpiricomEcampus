@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.empiricomecampus.adapters.UsersAdapter
@@ -37,8 +36,6 @@ class ProfilesFragment : Fragment() {
         binding.viewModel = profilesViewModel
         binding.profilesList.adapter = adapter
 
-
-
         profilesViewModel.navigateToAddProfile.observe(viewLifecycleOwner, {
             it?.let {
                 val action = ProfilesFragmentDirections.actionProfilesFragmentToAddProfileFragment()
@@ -63,7 +60,6 @@ class ProfilesFragment : Fragment() {
         return view
 
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
