@@ -39,10 +39,10 @@ class ScheduleFragment : Fragment() {
         if (!ADMIN.value!!) {
             binding.fab.visibility = View.GONE
         }
-//
-//        if (ADMIN.value!!) {
-//            setHasOptionsMenu(true)
-//        }
+
+        if (ADMIN.value!!) {
+            setHasOptionsMenu(true)
+        }
 
         binding.viewModel = scheduleViewModel
 
